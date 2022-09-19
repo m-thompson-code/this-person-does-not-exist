@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'this-person-does-not-exist';
+  images = [0];
+  constructor() {
+    setInterval(() => {
+      this.images.push(this.images.length);
+    }, 2000);
+  }
 }
